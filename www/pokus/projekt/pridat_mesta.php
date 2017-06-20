@@ -10,10 +10,10 @@ if(isset($_POST["submit"])) {
             $query->bindParam(1, $jmeno, PDO::PARAM_STR);
             //$query->bindParam(1, $trafika, PDO::PARAM_INT);
             if($query->execute()) {
-                echo "Zamestnanec pridan";
+                echo "Město přidáno";
             }
             else {
-                echo "Zamestnanec nepridan :-(";
+                echo "Mesto nepridano :-(";
             }
         }
         

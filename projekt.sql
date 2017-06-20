@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Počítač: localhost
--- Vytvořeno: Úte 20. čen 2017, 11:01
+-- Vytvořeno: Úte 20. čen 2017, 13:22
 -- Verze serveru: 5.7.11
 -- Verze PHP: 5.6.18
 
@@ -36,10 +36,11 @@ CREATE TABLE `internet` (
 --
 
 INSERT INTO `internet` (`id`, `firma`) VALUES
-(24, 'Dragon'),
-(25, 'Cerberos'),
-(26, 'O2 internet'),
-(27, 'Tmobile');
+(32, 'Dragon'),
+(33, 'O2-Internet'),
+(34, 'T-Mobile'),
+(35, 'Cerberos'),
+(36, 'Ufon');
 
 -- --------------------------------------------------------
 
@@ -58,7 +59,20 @@ CREATE TABLE `internet_mesto` (
 --
 
 INSERT INTO `internet_mesto` (`id`, `id_mesto`, `id_firma`) VALUES
-(32, 26, 24);
+(41, 39, 32),
+(42, 41, 32),
+(43, 42, 32),
+(44, 43, 32),
+(45, 44, 32),
+(46, 42, 33),
+(47, 43, 33),
+(48, 44, 35),
+(49, 43, 35),
+(50, 43, 36),
+(51, 41, 36),
+(52, 44, 34),
+(53, 39, 34),
+(54, 42, 34);
 
 -- --------------------------------------------------------
 
@@ -76,8 +90,11 @@ CREATE TABLE `mesta` (
 --
 
 INSERT INTO `mesta` (`id`, `nazev`) VALUES
-(26, 'Smrk'),
-(28, 'Mladá Bolesalv');
+(39, 'Stará Boleslav'),
+(41, 'Brno'),
+(42, 'Praha'),
+(43, 'Benátky nad Jizerou'),
+(44, 'Mladá Boleslav');
 
 --
 -- Klíče pro exportované tabulky
@@ -109,17 +126,17 @@ ALTER TABLE `mesta`
 -- AUTO_INCREMENT pro tabulku `internet`
 --
 ALTER TABLE `internet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT pro tabulku `internet_mesto`
 --
 ALTER TABLE `internet_mesto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 --
 -- AUTO_INCREMENT pro tabulku `mesta`
 --
 ALTER TABLE `mesta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

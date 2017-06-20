@@ -3,7 +3,7 @@
 $dotaz = $conn->prepare("SELECT mesta.nazev, internet.firma,internet_mesto.id FROM"
         . " internet_mesto LEFT JOIN mesta ON mesta.id = internet_mesto.id_mesto "
         . "LEFT JOIN internet ON internet.id = internet_mesto.id_firma "
-        . "GROUP BY internet_mesto.id");
+        . "GROUP BY internet_mesto.id ORDER BY mesta.nazev, internet.firma");
 $dotaz -> execute();
 
 echo "<table>";
